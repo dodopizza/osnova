@@ -1,6 +1,6 @@
-# Документация по [OSNOVA](https://rbk.money/osnova/)
+# Some docs for [OSNOVA](https://rbk.money/osnova/)
 
-## Навигация
+## Navigation
 
 - [Overview](#overview)
 - [Domain objects](#domain-objects)
