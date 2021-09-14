@@ -20,21 +20,21 @@
 Есть неочевидная вещь, что некоторые настройки обязательны к заполнению, хоть в интерфейсе и не указано, но без них просто работать ничего не будет, размечаю такие настройки звёздочками.
 
 <pre>
-<b>Name                                  | M | Type</b>
+<b>Name                              |  Type</b>
 ------------------------------------------------------------------------------
-PaymentInstitution                    | * | PaymentInstitutionObject
-|- SystemAccountSet                   | * | SystemAccountSetObject
-|- DefaultContractTemplate            | * | ContractTemplateObject
-|- WalletSystemAccountSet             |   | SystemAccountSetObject
-|- DefaultWalletContractTemplate      |   | ContractTemplateObject
-|- PaymentRoutingRules                | * | 
-|-|- Policies                         | * | RoutingRulesObject
-|-|-|- Candidates                     | * | RoutingCadidate
-|-|-|-|- Terminal                     | * | TerminalObject
-|-|-|-|-|- Provider                   | * | ProviderObject
-|-|-|-|-|-|- Proxy                    | * | ProxyObject
-|-|- Prohibitions                     | * | RoutingRulesObject, same as policies
-|- Inspector                          | * | InspectorObject
+PaymentInstitution                | PaymentInstitutionObject
+|- SystemAccountSet               | SystemAccountSetObject
+|- DefaultContractTemplate        | ContractTemplateObject
+|- WalletSystemAccountSet         | SystemAccountSetObject
+|- DefaultWalletContractTemplate  | ContractTemplateObject
+|- PaymentRoutingRules            | 
+|-|- Policies                     | RoutingRulesObject
+|-|-|- Candidates                 | RoutingCadidate
+|-|-|-|- Terminal                 | TerminalObject
+|-|-|-|-|- Provider               | ProviderObject
+|-|-|-|-|-|- Proxy                | ProxyObject
+|-|- Prohibitions                 | RoutingRulesObject, same as policies
+|- Inspector                      | InspectorObject
 </pre>
 
 ## Domain objects
