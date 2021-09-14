@@ -2,7 +2,8 @@
 
 ## Navigation
 
-- [Overview](#overview)
+- [Links](#overview)
+- [Settings](#settings)
 - [Domain objects](#domain-objects)
 - [Adapter development](#adapter-development)
 
@@ -11,6 +12,28 @@
 - [Документация общая](https://rbk.money/osnova/)
 - [Документация по апи](https://developer.rbk.money/api/)
 - [Документация по объектам системы](https://github.com/rbkmoney/damsel/)
+
+## Settings
+
+Иерархия настроек и их типы.
+
+Есть неочевидная вещь, что некоторые настройки обязательны к заполнению, хоть в интерфейсе и не указано, но без них просто работать ничего не будет, размечаю такие настройки звёздочками.
+
+```                        
+PaymentInstitution                    | * | PaymentInstitutionObject
+|- SystemAccountSet                   | * | SystemAccountSetObject
+|- DefaultContractTemplate            | * | ContractTemplateObject
+|- WalletSystemAccountSet             |   | SystemAccountSetObject
+|- DefaultWalletContractTemplate      |   | ContractTemplateObject
+|- PaymentRoutingRules                | * | 
+|-|- Policies                         | * | RoutingRulesObject
+|-|-|- Candidates                     | * | RoutingCadidate
+|-|-|-|- Terminal                     | * | TerminalObject
+|-|-|-|-|- Provider                   | * | ProviderObject
+|-|-|-|-|-|- Proxy                    | * | ProxyObject
+|-|- Prohibitions                     | * | RoutingRulesObject, same as policies
+|- Inspector                          | * | InspectorObject
+```
 
 ## Domain objects
 
@@ -35,6 +58,14 @@
 ### Proxy
 
 Абстрация для сервисов интеграции с эквайрингами — банками, платёжными шлюзами и прочими провайдерами платёжных услуг.
+
+### PaymentInstitution
+
+Некий объект отражающий юридическое лицо самой системы, кто собственно осуществляет операции (юридически это не совсем так на самом деле, и там много сущностей, но в доменной модели сделано так). Соответственно на PaymentInstitution ссылаются все договора и условия. Отсюда начинаются все проверки и проще всего делать настройки начиная с этой сущности.
+
+### ContractTemplate
+
+Что-то вроде набора условий прописанных в договоре с мерчантом. 
 
 ## Adapter development
 
