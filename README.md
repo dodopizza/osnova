@@ -2,7 +2,7 @@
 
 ## Navigation
 
-- [Links](#overview)
+- [Overview](#overview)
 - [Settings](#settings)
 - [Domain objects](#domain-objects)
 - [Adapter development](#adapter-development)
