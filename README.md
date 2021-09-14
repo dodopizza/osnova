@@ -15,9 +15,9 @@
 
 ## Settings
 
-Иерархия настроек и их типы.
+Производятся в https://idkfa.{host}
 
-Есть неочевидная вещь, что некоторые настройки обязательны к заполнению, хоть в интерфейсе и не указано, но без них просто работать ничего не будет, размечаю такие настройки звёздочками.
+Иерархия настроек, позволяет понять взаимосвязь между сущностями.
 
 <pre>
 <b>Name                              |  Type</b>
@@ -25,8 +25,6 @@
 PaymentInstitution                | PaymentInstitutionObject
 |- SystemAccountSet               | SystemAccountSetObject
 |- DefaultContractTemplate        | ContractTemplateObject
-|- WalletSystemAccountSet         | SystemAccountSetObject
-|- DefaultWalletContractTemplate  | ContractTemplateObject
 |- PaymentRoutingRules            | 
 |-|- Policies                     | RoutingRulesObject
 |-|-|- Candidates                 | RoutingCadidate
@@ -36,6 +34,12 @@ PaymentInstitution                | PaymentInstitutionObject
 |-|- Prohibitions                 | RoutingRulesObject, same as policies
 |- Inspector                      | InspectorObject
 </pre>
+
+Сейчас тут перечислены только сущности необходимые для того, чтобы заработали карточные платежи.
+
+Есть неочевидная вещь — некоторые настройки обязательны к заполнению, хоть в интерфейсе и не указано, но без них просто работать ничего не будет.
+
+Сами объекты описаны ниже.
 
 ## Domain objects
 
