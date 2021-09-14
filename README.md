@@ -19,7 +19,9 @@
 
 Есть неочевидная вещь, что некоторые настройки обязательны к заполнению, хоть в интерфейсе и не указано, но без них просто работать ничего не будет, размечаю такие настройки звёздочками.
 
-```                        
+``` 
+Name                                  | M | Type
+
 PaymentInstitution                    | * | PaymentInstitutionObject
 |- SystemAccountSet                   | * | SystemAccountSetObject
 |- DefaultContractTemplate            | * | ContractTemplateObject
