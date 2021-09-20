@@ -87,19 +87,22 @@ TermSetHierarchyObject
 ### PaymentMethod
 
 Способ оплаты и его некоторые настройки.
-
+<pre>
 PaymentMethodObject
-- ref
-  - id (PaymentMethod) — способ оплаты, я так понял, тут то, что поддерживает ядро процессинга
-- data
-  - name - любой текст, используется только в админке
-  - description - любой текст, используется только в админке
+|- ref
+|-|- id (PaymentMethod) — способ оплаты, я так понял, тут то, что поддерживает ядро процессинга
+|- data
+|-|- name - любой текст, используется только в админке
+|-|- description - любой текст, используется только в админке
+</pre>
 
+<pre>
 bank_card - карточные платежи
-- payment_system — виза, мастеркард
-- is_cvv_empty — присутствует ли CVV
-- token_provider - в случае оплаты волетами нужно выбрать провайдера, например, эплпей, гуглпей 
-- tokenization_method — dpan / none
+|- payment_system — виза, мастеркард
+|- is_cvv_empty — присутствует ли CVV
+|- token_provider - в случае оплаты волетами нужно выбрать провайдера, например, эплпей, гуглпей 
+|- tokenization_method — dpan / none
+</pre>
 
 ## Adapter development
 
