@@ -101,7 +101,7 @@ bank_card - карточные платежи
 |- payment_system — виза, мастеркард
 |- is_cvv_empty — присутствует ли CVV
 |- token_provider - в случае оплаты волетами нужно выбрать провайдера, например, эплпей, гуглпей 
-|- tokenization_method — dpan / none
+|- tokenization_method — dpan, none
 </pre>
 
 ## Adapter development
