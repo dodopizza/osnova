@@ -71,7 +71,35 @@ PaymentInstitution                | PaymentInstitutionObject
 
 ### ContractTemplate
 
-Что-то вроде набора условий прописанных в договоре с мерчантом. 
+Шаблон контракта с мерчантом, связан с набором условий TermSetHierarchy. 
+
+### TermSetHierarchy
+
+Набор условий в договоре с мерчантом, такие как способы оплаты.
+
+TermSetHierarchyObject
+- data
+  - term_sets TimedTermSet[]
+    - terms
+      - payments
+        - payments_methods PaymentMethodRef[] — способы оплаты доступные клиентам, отображаются в checkout UI
+
+### PaymentMethod
+
+Способ оплаты и его некоторые настройки.
+
+PaymentMethodObject
+- ref
+  - id (PaymentMethod) — способ оплаты, я так понял, тут то, что поддерживает ядро процессинга
+- data
+  - name - любой текст, используется только в админке
+  - description - любой текст, используется только в админке
+
+bank_card - карточные платежи
+- payment_system — виза, мастеркард
+- is_cvv_empty — присутствует ли CVV
+- token_provider - в случае оплаты волетами нужно выбрать провайдера, например, эплпей, гуглпей 
+- tokenization_method — dpan / none
 
 ## Adapter development
 
