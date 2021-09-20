@@ -71,22 +71,25 @@ PaymentInstitution                | PaymentInstitutionObject
 
 ### ContractTemplate
 
-Шаблон контракта с мерчантом, связан с набором условий TermSetHierarchy. 
+Шаблон контракта с мерчантом, связан с набором условий [TermSetHierarchy](#termsethierarchy). 
 
 ### TermSetHierarchy
 
 Набор условий в договоре с мерчантом, такие как способы оплаты.
 
+<pre>
 TermSetHierarchyObject
-- data
-  - term_sets TimedTermSet[]
-    - terms
-      - payments
-        - payments_methods PaymentMethodRef[] — способы оплаты доступные клиентам, отображаются в checkout UI
+|- data
+|-|- term_sets TimedTermSet[]
+|-|-|- terms
+|-|-|-|- payments
+|-|-|-|-|- payments_methods PaymentMethodRef[] — способы оплаты доступные клиентам, отображаются в checkout UI
+</pre>
 
 ### PaymentMethod
 
 Способ оплаты и его некоторые настройки.
+
 <pre>
 PaymentMethodObject
 |- ref
