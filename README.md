@@ -49,7 +49,7 @@ PaymentInstitution                | PaymentInstitutionObject
 
 Абстракция для юридического лица или мерчанта в реальном мире. 
 
-Чтобы создать новый party нужно создать новый аккаунт в [keycloak](https://auth.rbk-pay.dodois.ru/) в realm external, добавить в группу merchants, party для этого аккаунта создастся автоматически.
+Чтобы создать новый party нужно создать новый аккаунт в [keycloak](https://auth.rbk-pay.dodois.dev/) в realm external, добавить в группу merchants, party для этого аккаунта создастся автоматически.
 
 В нашем бизнесе это один партнёр-франчайзи, у которого может быть 1+ пиццерий.
 
